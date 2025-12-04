@@ -2,11 +2,11 @@ CC=gcc
 CFLAGS=-Wall -Wextra -std=c11
 BIN_DIR=bin
 
-# Crear carpeta bin si no existe
+# Create bin dir if not exists
 $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
-# Build de cada etapa
+# Build for each step
 bump: $(BIN_DIR)
 	$(CC) 00_bump_allocator/main.c 00_bump_allocator/bump.c -o $(BIN_DIR)/bump.exe $(CFLAGS)
 

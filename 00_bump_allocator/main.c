@@ -4,7 +4,7 @@
 
 int main() {
     size_t arena_size = 1024;
-
+    
     void *arena = malloc(arena_size);
     bump_init(arena, arena_size);
 
